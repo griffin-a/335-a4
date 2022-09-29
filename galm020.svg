@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250">
+    <defs>
+        <mask id="maskIt">
+            <rect width="100%" height="100%" fill="white"/>
+            <ellipse cx="250" cy="250" rx="115" ry="185" fill="black"/>
+        <rect x="244" y="50" width="10" height="200" fill="black"/>
+
+        </mask>
+        <clipPath id="clipIt">
+            <rect x="250" y="200" width="500" height="20"/>
+        </clipPath>
+    </defs>
+
+    <g>
+        <ellipse mask="url(#maskIt)" cx="250" cy="250" rx="130" ry="200" />
+        <!-- <ellipse cx="250" cy="250" rx="120" ry="100" fill="red"/>  -->
+        <!-- <rect x="229" y="55" width="15" height="200" fill="black"/> -->
+        <rect x="254" y="55" width="15" height="200" fill="black"/>
+        <rect x="260" y="170" width="100" height="15" />
+        <polyline points="120,245 235,245 235,170 200,170" style="fill:none;stroke:black;stroke-width:15"/>
+    </g>
+
+
+
+</svg>
