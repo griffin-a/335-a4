@@ -1,9 +1,42 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>A4</title>
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <title>A4</title>
+    <link rel="stylesheet" href="galm020.css" />
+</head>
+
+<body>
+    <header>
+        <h1>
+            Game Log
+        </h1>
+    </header>
+    <main>
+        <div id="graph">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600">
+                <rect fill="lightgray" width="1000" height="600" />
+                <!-- <polyline points="100,100 100,500 900,500 900,100" fill="none" stroke="black" stroke-width="15" stroke-linejoin="round"/> -->
+                <rect x="50" y="50" width="900" height="500" stroke="black" stroke-width="5" fill="none" />
+            </svg>
+        </div>
+    </main>
+
+    <footer>
+        <!-- <section id="stats"> -->
+        <div id="played">
+            <h3>Played</h3>
+            <p>Testing 123</p>
+        </div>
+
+        <div id="completed">
+            <h3>Completed</h3>
+            <p>Testing 123</p>
+        </div>
+        <!-- </section> -->
+    </footer>
+
+    <script src="galm020.js" />
+</body>
+
 </html>
