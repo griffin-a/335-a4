@@ -1,9 +1,24 @@
-header, main, h3, footer > div {
+header,
+main,
+h3,
+footer > div {
   display: flex;
   justify-content: center;
 }
 
 .gameData {
-    width: 70%;
-    overflow-wrap: break-word;
+  width: 70%;
+  overflow-wrap: break-word;
+}
+
+#graph {
+  width: 1000px;
+  height: 600px;
+  resize: both;
+  overflow: auto;
+}
+
+svg {
+  width: 95%;
+  height: 95%;
 }
