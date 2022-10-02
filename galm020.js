@@ -13,6 +13,25 @@ const getStats = async () => {
   const data = await res.json();
 
   console.log(data);
+
+  const playedData = document.getElementById("playedData");
+  const completedData = document.getElementById("completedData");
+
+  const playedNumbers = [];
+  const completedNumbers = [];
+
+  data.map(item => {
+    playedNumbers.push(item["played"]);
+    completedNumbers.push(item["completed"]);
+  });
+
+  console.log(playedNumbers);
+  console.log(completedNumbers);
+
+  playedData.innerText = playedNumbers;
+  completedData.innerText = completedNumbers;
+
+
 };
 
 getStats();

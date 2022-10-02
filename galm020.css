@@ -2,3 +2,8 @@ header, main, h3, footer > div {
   display: flex;
   justify-content: center;
 }
+
+.gameData {
+    width: 70%;
+    overflow-wrap: break-word;
+}
