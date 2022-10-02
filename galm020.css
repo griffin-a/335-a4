@@ -1,18 +1,4 @@
-header {
+header, main, h3, footer > div {
   display: flex;
   justify-content: center;
 }
-
-main {
-  display: flex;
-  justify-content: center;
-}
-
-footer > div {
-  display: flex;
-  justify-content: center;
-}
-/* 
-#stats > div {
-    display: block;
-} */
