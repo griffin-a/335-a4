@@ -16,7 +16,6 @@
         <div id="graph">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" id="svgGraph">
                 <rect fill="lightgray" width="1200" height="800" />
-                <!-- <polyline points="100,100 100,500 900,500 900,100" fill="none" stroke="black" stroke-width="15" stroke-linejoin="round"/> -->
                 <rect x="100" y="100" width="1000" height="600" stroke="black" stroke-width="5" fill="none" />
                 <text id="topLimit" class="heavy" x="40" y="100"></text>
                 <text id="bottomLimit" class="heavy" x="40" y="700"></text>
@@ -26,6 +25,9 @@
                 <polyline points="600,740 710,740" stroke="green" stroke-width="10" />
                 <text x="120" y="680" class="med" id="startDate">Start date</text>
                 <text x="980" y="680" class="med" id="endDate">End date</text>
+
+                <polyline id="playedLine" />
+                <polyline id="completedLine" />
             </svg>
         </div>
     </main>

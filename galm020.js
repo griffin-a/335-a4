@@ -67,36 +67,38 @@ const getStats = async () => {
   const unitSizeY = Math.ceil((BOX_HEIGHT - min) / max);
   console.log(unitSizeX, unitSizeY);
 
-  const svgGraph = document.getElementById("svgGraph");
-  const playedDataLine = document.createElementNS('http://www.w3.org/2000/svg','polyline');
-  const completedDataLine = document.createElementNS('http://www.w3.org/2000/svg','polyline');
+  const playedDataLine = document.getElementById("playedLine");
+  const completedDataLine = document.getElementById("completedLine");
 
   let currentX = 100;
-  const playedPoints = playedDataLine.getAttribute("points");
+  let playedPointsString = "";
 
-  for (let i = 0; i < playedData.length - 1; i++) {
+  for (let i = 0; i < playedNumbers.length - 1; i++) {
     const xCoord = currentX;
-    const yCoord = playedData[i] * unitSizeY;
-    playedPoints += `${xCoord}, ${yCoord}`;
-    currentX *= unitSizeX;
+    const yCoord = playedNumbers[i] * unitSizeY;
+    playedPointsString += `${xCoord},${yCoord} `;
+    currentX += unitSizeX;
   }
 
-  playedDataLine.setAttribute("points", playedPoints);
+  console.log(playedPointsString);
+  playedDataLine.setAttribute("points", playedPointsString);
 
-  const completedPoints = completedDataLine.getAttribute("points");
+  let completedPointsString = "";
+
   currentX = 100;
 
-  for (let j = 0; j < completedData.length - 1; j++) {
+  for (let j = 0; j < completedNumbers.length - 1; j++) {
     const xCoord = currentX;
-    const yCoord = completedData[i] * unitSizeY;
-    completedPoints += `${xCoord}, ${yCoord}`;
-    currentX *= unitSizeX;
+    const yCoord = completedNumbers[j] * unitSizeY;
+    completedPointsString += `${xCoord},${yCoord} `;
+    currentX += unitSizeX;
   }
 
-  completedDataLine.setAttribute("points", completedPoints);
+  console.log(completedPointsString);
+  completedDataLine.setAttribute("points", completedPointsString);
 
-  svgGraph.appendChild(playedDataLine);
-  svgGraph.appendChild(completedDataLine);
+  // svgGraph.appendChild(playedDataLine);
+  // svgGraph.appendChild(completedDataLine);
 };
 
 getStats();
