@@ -61,7 +61,7 @@ const getStats = async () => {
 
   // Begin plotting played/finished games 
   // Get the width multiplier for each point
-  const unitSizeX = ((BOX_WIDTH + 50) / data.length);
+  const unitSizeX = ((BOX_WIDTH) / data.length);
 
   // Get the height multiplier for each point
   const unitSizeY = Math.ceil((BOX_HEIGHT - min) / max);
@@ -73,7 +73,7 @@ const getStats = async () => {
   let currentX = 100;
   let playedPointsString = "";
 
-  for (let i = 0; i < playedNumbers.length - 1; i++) {
+  for (let i = 0; i < playedNumbers.length; i++) {
     const xCoord = currentX;
     const yRatio = 1 - ((playedNumbers[i] - min) / (max - min));
     const yCoord = (BOX_HEIGHT * yRatio) + 100;
@@ -88,7 +88,7 @@ const getStats = async () => {
 
   currentX = 100;
 
-  for (let j = 0; j < completedNumbers.length - 1; j++) {
+  for (let j = 0; j < completedNumbers.length; j++) {
     const xCoord = currentX;
     const yRatio = 1 - ((completedNumbers[j] - min) / (max - min));
     const yCoord = (BOX_HEIGHT * yRatio) + 100;
