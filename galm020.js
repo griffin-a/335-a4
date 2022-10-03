@@ -75,7 +75,8 @@ const getStats = async () => {
 
   for (let i = 0; i < playedNumbers.length - 1; i++) {
     const xCoord = currentX;
-    const yCoord = playedNumbers[i] * unitSizeY;
+    const yRatio = 1 - ((playedNumbers[i] - min) / (max - min));
+    const yCoord = (BOX_HEIGHT * yRatio) + 100;
     playedPointsString += `${xCoord},${yCoord} `;
     currentX += unitSizeX;
   }
@@ -89,7 +90,8 @@ const getStats = async () => {
 
   for (let j = 0; j < completedNumbers.length - 1; j++) {
     const xCoord = currentX;
-    const yCoord = completedNumbers[j] * unitSizeY;
+    const yRatio = 1 - ((completedNumbers[j] - min) / (max - min));
+    const yCoord = (BOX_HEIGHT * yRatio) + 100;
     completedPointsString += `${xCoord},${yCoord} `;
     currentX += unitSizeX;
   }
