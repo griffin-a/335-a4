@@ -71,6 +71,32 @@ const getStats = async () => {
   const playedDataLine = document.createElementNS('http://www.w3.org/2000/svg','polyline');
   const completedDataLine = document.createElementNS('http://www.w3.org/2000/svg','polyline');
 
+  let currentX = 100;
+  const playedPoints = playedDataLine.getAttribute("points");
+
+  for (let i = 0; i < playedData.length - 1; i++) {
+    const xCoord = currentX;
+    const yCoord = playedData[i] * unitSizeY;
+    playedPoints += `${xCoord}, ${yCoord}`;
+    currentX *= unitSizeX;
+  }
+
+  playedDataLine.setAttribute("points", playedPoints);
+
+  const completedPoints = completedDataLine.getAttribute("points");
+  currentX = 100;
+
+  for (let j = 0; j < completedData.length - 1; j++) {
+    const xCoord = currentX;
+    const yCoord = completedData[i] * unitSizeY;
+    completedPoints += `${xCoord}, ${yCoord}`;
+    currentX *= unitSizeX;
+  }
+
+  completedDataLine.setAttribute("points", completedPoints);
+
+  svgGraph.appendChild(playedDataLine);
+  svgGraph.appendChild(completedDataLine);
 };
 
 getStats();
