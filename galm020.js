@@ -1,4 +1,5 @@
 const API_URL = "https://cws.auckland.ac.nz/gas/api/GameLog";
+const BOX_HEIGHT = 800;
 
 /*
 [
@@ -39,6 +40,15 @@ const getStats = async () => {
   const min = Math.min(playedMin, completedMin);
 
   console.log(max, min);
+
+  const unitSize = Math.ceil((BOX_HEIGHT - min) / max);
+  console.log(unitSize);
+
+  const topLimit = document.getElementById("topLimit");
+  const bottomLimit = document.getElementById("bottomLimit");
+
+  topLimit.textContent = max;
+  bottomLimit.textContent = min;
 };
 
 getStats();

@@ -22,3 +22,7 @@ svg {
   width: 95%;
   height: 95%;
 }
+
+.heavy {
+  font: bold 30px sans-serif;
+}
