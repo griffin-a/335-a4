@@ -49,6 +49,18 @@ const getStats = async () => {
 
   topLimit.textContent = max;
   bottomLimit.textContent = min;
+
+  const startDate = data[0]["date"];
+  const endDate = data[data.length - 1]["date"];
+
+  console.log(startDate, endDate);
+
+  const firstDate = document.getElementById("startDate");
+  firstDate.textContent = startDate;
+
+  const secondDate = document.getElementById("endDate");
+  secondDate.textContent = endDate;
+
 };
 
 getStats();
