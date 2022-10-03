@@ -61,7 +61,7 @@ const getStats = async () => {
 
   // Begin plotting played/finished games 
   // Get the width multiplier for each point
-  const unitSizeX = (BOX_WIDTH / data.length);
+  const unitSizeX = ((BOX_WIDTH + 50) / data.length);
 
   // Get the height multiplier for each point
   const unitSizeY = Math.ceil((BOX_HEIGHT - min) / max);
