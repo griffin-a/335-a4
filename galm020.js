@@ -25,13 +25,20 @@ const getStats = async () => {
     completedNumbers.push(item["completed"]);
   });
 
-  console.log(playedNumbers);
-  console.log(completedNumbers);
-
   playedData.innerText = playedNumbers;
   completedData.innerText = completedNumbers;
 
+  // Find the max and min values of the data present to be used for graphing
+  const playedMax = Math.max(...playedNumbers);
+  const playedMin = Math.min(...playedNumbers);
+  
+  const completedMax = Math.max(...completedNumbers);
+  const completedMin = Math.min(...completedNumbers);
 
+  const max = Math.max(playedMax, completedMax);
+  const min = Math.min(playedMin, completedMin);
+
+  console.log(max, min);
 };
 
 getStats();
