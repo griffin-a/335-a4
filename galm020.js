@@ -1,6 +1,6 @@
 const API_URL = "https://cws.auckland.ac.nz/gas/api/GameLog";
-const BOX_WIDTH = 1000;
-const BOX_HEIGHT = 600;
+const BOX_WIDTH = 1600;
+const BOX_HEIGHT = 800;
 
 /*
 [
@@ -61,7 +61,7 @@ const getStats = async () => {
 
   // Begin plotting played/finished games 
   // Get the width multiplier for each point
-  const unitSizeX = Math.ceil(BOX_WIDTH / data.length);
+  const unitSizeX = (BOX_WIDTH / data.length);
 
   // Get the height multiplier for each point
   const unitSizeY = Math.ceil((BOX_HEIGHT - min) / max);
