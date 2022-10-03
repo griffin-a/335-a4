@@ -1,5 +1,6 @@
 const API_URL = "https://cws.auckland.ac.nz/gas/api/GameLog";
-const BOX_HEIGHT = 800;
+const BOX_WIDTH = 1000;
+const BOX_HEIGHT = 600;
 
 /*
 [
@@ -41,9 +42,6 @@ const getStats = async () => {
 
   console.log(max, min);
 
-  const unitSize = Math.ceil((BOX_HEIGHT - min) / max);
-  console.log(unitSize);
-
   const topLimit = document.getElementById("topLimit");
   const bottomLimit = document.getElementById("bottomLimit");
 
@@ -60,6 +58,18 @@ const getStats = async () => {
 
   const secondDate = document.getElementById("endDate");
   secondDate.textContent = endDate;
+
+  // Begin plotting played/finished games 
+  // Get the width multiplier for each point
+  const unitSizeX = Math.ceil(BOX_WIDTH / data.length);
+
+  // Get the height multiplier for each point
+  const unitSizeY = Math.ceil((BOX_HEIGHT - min) / max);
+  console.log(unitSizeX, unitSizeY);
+
+  const svgGraph = document.getElementById("svgGraph");
+  const playedDataLine = document.createElementNS('http://www.w3.org/2000/svg','polyline');
+  const completedDataLine = document.createElementNS('http://www.w3.org/2000/svg','polyline');
 
 };
 
