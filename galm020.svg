@@ -1,30 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
     <defs>
-        <mask id="maskIt">
-            <!-- <rect width="100%" height="100%" fill="white" /> -->
-            <!-- <ellipse cx="250" cy="300" rx="115" ry="235" fill="black" /> -->
-            <!-- <rect x="244" y="0" width="10" height="250" fill="black" /> -->
+        <clipPath id="left">
+            <rect x="0" y="0" width="180" height="400" />
 
-        </mask>
-        <clipPath id="clipIt">
-            <rect x="250" y="200" width="500" height="20" />
-            
+        </clipPath>
+        <clipPath id="right">
+            <rect x="200" y="0" width="220" height="400" />
+
         </clipPath>
     </defs>
 
     <g>
-        <ellipse cx="250" cy="460" rx="200" ry="400" />
+        <ellipse clip-path="url(#left)" cx="198" cy="420" rx="190" ry="400" fill="none" stroke-width="20"
+            stroke="black" />
+
+        <ellipse clip-path="url(#right)" cx="202" cy="420" rx="190" ry="400" fill="none" stroke-width="20"
+            stroke="black" />
+
         <!-- <ellipse cx="250" cy="250" rx="120" ry="100" fill="red"/>  -->
         <!-- <rect x="229" y="55" width="15" height="200" fill="black"/> -->
         <!-- <rect x="254" y="5" width="15" height="250" fill="black" /> -->
         <!-- <rect x="260" y="150" width="100" height="15" /> -->
         <!-- <polyline points="120,245 235,245 235,155 190,155" fill="none" stroke="black" stroke-width="15" -->
-            <!-- stroke-linejoin="round" /> -->
+        <!-- stroke-linejoin="round" /> -->
     </g>
 
-    
-    <path transform="translate(50,50)" xmlns="http://www.w3.org/2000/svg" fill="black"
-    d="M200.000 205.000 L 200.000 400.000 210.200 400.000 L 
+    <path xmlns="http://www.w3.org/2000/svg" fill-opacity="0.5" fill="purple" d="M200.000 205.000 L 200.000 400.000 210.200 400.000 L 
     220.400 400.000 220.400 330.200 L 220.400 260.400 293.373 
     260.400 C 362.528 260.400,366.357 260.437,366.548 261.100 
     C 372.646 282.253,380.000 354.841,380.000 393.882 L 380.000 
